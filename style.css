@@ -19,12 +19,17 @@ ul,ol,li {
 
 }
 
+:root {
 
+--primary-color: #f07807;
+--secudary-color: #fbddc1;
+--default-shadow: 0 4px 6px #0008;
+}
 
 body {
 
 padding: 0 80px;
-
+font-family: "poppins" ,;
 
 }
 header {
@@ -34,8 +39,32 @@ header {
     position: fixed;
     top: 60px;
     background-color: lightgreen;
-    
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
 }
+header menu {
+ 
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+header li {
+    background-color: green;
+    padding: 4px 8px;
+    box-shadow: o 4px 4px #00080000;
+}
+header li.hover {
+    background-color: #fbddc1;
+}
+header button {
+    height: 48px;
+    width: 120px;
+    background-color: var(--secudary-color);
+    border: none;
+    border-radius: 12px;
+}
+
 main {
 height: 700px;
 background-color: plum;

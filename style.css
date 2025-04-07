@@ -23,20 +23,23 @@ ul,ol,li {
 
 body {
 
-display: grid;
-grid-template-rows: 60px 1fr 526px;
+
 
 }
 header {
+    height: 60px;
+    width: 100%;
+    position: absolute;
     background-color: lightgreen;
+    
 }
 main {
-
+height: 700px;
 background-color: plum;
 
 }
 footer {
-
+    height: 525px;
     background-color: tomato;
 
 }

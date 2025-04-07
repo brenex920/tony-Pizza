@@ -38,7 +38,7 @@ header {
     width: calc(100% - 160px);
     position: fixed;
     top: 60px;
-    background-color: lightgreen;
+    
     justify-content: space-between;
     display: flex;
     align-items: center;
@@ -50,12 +50,14 @@ header menu {
     align-items: center;
 }
 header li {
-    background-color: green;
+    transition: .5s;
     padding: 4px 8px;
-    box-shadow: o 4px 4px #00080000;
+   
+    
 }
-header li.hover {
+header li:hover {
     background-color: #fbddc1;
+    box-shadow: var(--default-shadow);
 }
 header button {
     height: 48px;
@@ -63,6 +65,8 @@ header button {
     background-color: var(--secudary-color);
     border: none;
     border-radius: 12px;
+    align-items: center;
+    
 }
 
 main {

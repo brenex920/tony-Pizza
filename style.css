@@ -23,13 +23,16 @@ ul,ol,li {
 
 body {
 
+padding: 0 80px;
 
 
 }
 header {
+
     height: 60px;
-    width: 100%;
-    position: absolute;
+    width: calc(100% - 160px);
+    position: fixed;
+    top: 60px;
     background-color: lightgreen;
     
 }

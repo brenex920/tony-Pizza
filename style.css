@@ -1,8 +1,8 @@
 * {
 
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 
 }
 
@@ -21,30 +21,28 @@ ul,ol,li {
 
 :root {
 
---primary-color: #f07807;
---secudary-color: #fbddc1;
---default-shadow: 0 4px 6px #0008;
+    --primary-color: #f07807;
+    --secudary-color: #fbddc1;
+    --default-shadow: 0 4px 6px #0008;
+    --default-pading: 0 80px;
 }
 
 body {
-
-padding: 0 80px;
-font-family: "poppins" ,;
+    font-family: "poppins" , sans-serif;
+    background-color: var(--secudary-color);
 
 }
 header {
-
     height: 60px;
-    width: calc(100% - 160px);
+    width: 100%;
     position: fixed;
     top: 60px;
-    
     justify-content: space-between;
     display: flex;
     align-items: center;
+    padding: var(--default-pading);
 }
 header menu {
- 
     display: flex;
     gap: 48px;
     align-items: center;
@@ -66,14 +64,123 @@ header button {
     border: none;
     border-radius: 12px;
     align-items: center;
-    
 }
 
-main {
-height: 700px;
-background-color: plum;
+section {
+    height: 100vh;
 
 }
+.home{
+
+    background-image: url(./img/triangulo/background.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    grid-template-rows: 3fr 1fr; 
+    display: grid;
+}
+.hero {
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 64px;
+
+}
+.hero h2 {
+    width: 558px;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 64px;
+
+}
+.hero span {
+    color: var(--primary-color)
+}
+
+.container-pizza {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pizza {
+    display: flex;
+    border-radius: 12px;
+    position: relative;
+    background-color: aquamarine;
+    overflow: ;
+}
+.adicionar {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    display: grid;
+    place-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: var(--primary-color);
+    border: 4px solid white;
+    border-radius: 13px;
+    font-size: 32px;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+.pizza:hover .adicionar {
+    opacity: 1;
+}
+.animacao{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.container-info {
+    justify-content: space-between;
+    position: absolute;
+    display: flex;
+    padding: 0 12px;
+    bottom: -36px;
+    width: 100%;
+    height: 36px;
+    background-color: #0008;
+    border-radius: 0 0 12px 12px;
+    align-items: center;
+    transition: .5s;
+}
+.pizza:hover .container-info {
+    bottom: 0;
+}
+
+.container-info p {
+    width: 120px;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+}
+.container-info span {
+    display: grid;
+    place-content: center;
+    width: 57px;
+    height: 20px;
+    background-color: var(--primary-color);
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+}
+
+.cardapio{
+    background-color: lightgreen;
+}
+.servico{
+    background-color: lightpink;
+}
+
 footer {
     height: 525px;
     background-color: tomato;
